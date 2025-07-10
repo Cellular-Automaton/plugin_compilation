@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/a/EIP/CAMI-Desktop/src/communication/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
