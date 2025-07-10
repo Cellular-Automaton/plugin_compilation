@@ -106,7 +106,7 @@ Napi::Array Wrapper::add_get_params(const Napi::CallbackInfo &info)
 Napi::Object Wrapper::init(Napi::Env env, Napi::Object exports)
 {
 
-    exports.Set("simulate", Napi::Function::New(env, Wrapper::add_wrapped_gol));
+    exports.Set("simulate", Napi::Function::New(env, Wrapper::add_wrapped_lenia));
     exports.Set("get_params", Napi::Function::New(env, Wrapper::add_get_params));
     return exports;
 }
