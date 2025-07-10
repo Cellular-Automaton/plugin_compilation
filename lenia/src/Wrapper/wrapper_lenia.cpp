@@ -3,8 +3,8 @@
 ** main
 */
 
-#include <Plugins/Lenia.hh>
-#include <Wrappers/WrapperLenia.hh>
+#include <Plugin/Lenia.hh>
+#include <Wrapper/WrapperLenia.hh>
 
 std::vector<double> Wrapper::simulate_lenia(double *tab_init_1D, int R, double kernel_mu,
                                             double kernel_sigma, double growth_mu,

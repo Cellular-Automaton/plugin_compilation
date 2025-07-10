@@ -5,8 +5,8 @@
 ** init
 */
 
+#include <Wrapper/WrapperGol.hh>
 #include <WrapperInit.hh>
-#include <Wrappers/WrapperGol.hh>
 #include <iostream>
 
 Napi::Uint32Array Wrapper::add_wrapped_gol(const Napi::CallbackInfo &info)

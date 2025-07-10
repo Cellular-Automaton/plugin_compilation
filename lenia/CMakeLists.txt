@@ -12,22 +12,20 @@ include_directories(include/)
 
 #file(GLOB SOURCE_FILES "src/plugin_impl.cpp" "include/*.hh")
 
-add_library(lenia SHARED IMPORTED)
-set_target_properties( lenia PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/libs/cami-core.so)
 #set_property(TARGET lenia PROPERTY IMPORTED_LOCATION "./libs/cami-core")
 
 
 
 add_library(${PROJECT_NAME} SHARED
     src/init.cpp
-    src/Wrappers/wrapper_lenia.cpp
+    src/Wrapper/wrapper_lenia.cpp
+    src/Plugin/Lenia.cpp
     #    ${SOURCE_FILES}
     ${CMAKE_JS_SRC}
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
 target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB})
-target_link_libraries(${PROJECT_NAME} lenia)
 execute_process(COMMAND node -p "require('node-addon-api').include"
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
         OUTPUT_VARIABLE NODE_ADDON_API_DIR
@@ -38,7 +36,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${NODE_ADDON_API_DIR})
 target_include_directories(${PROJECT_NAME}
     PUBLIC
     include/
-    include/Plugins/
-    include/Wrappers/)
+    include/Plugin/
+    include/Wrapper/)
 add_definitions(-DNAPI_VERSION=4)
 

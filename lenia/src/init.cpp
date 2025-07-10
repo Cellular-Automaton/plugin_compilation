@@ -5,8 +5,8 @@
 ** init
 */
 
+#include <Wrapper/WrapperLenia.hh>
 #include <WrapperInit.hh>
-#include <Wrappers/WrapperLenia.hh>
 #include <iostream>
 
 Napi::Float64Array Wrapper::add_wrapped_lenia(const Napi::CallbackInfo &info)

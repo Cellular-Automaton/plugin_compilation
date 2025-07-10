@@ -3,8 +3,8 @@
 ** main
 */
 
-#include <Plugins/GameOfLife.hh>
-#include <Wrappers/WrapperGol.hh>
+#include <Plugin/GameOfLife.hh>
+#include <Wrapper/WrapperGol.hh>
 
 std::vector<size_t> Wrapper::simulate_gol(unsigned int *tab_init_1D, size_t width, size_t height)
 {
