@@ -8,6 +8,8 @@
 #include <Wrapper/WrapperLenia.hh>
 #include <WrapperInit.hh>
 #include <iostream>
+#include <array>
+#include <string>
 
 Napi::Float64Array Wrapper::add_wrapped_lenia(const Napi::CallbackInfo &info)
 {
